@@ -1,5 +1,4 @@
 import streamlit as st
-from scipy.optimize import minimize
 
 def my_function(x):
     return x[0] + 0.5*x[1] + 0.125*x[2] + 60

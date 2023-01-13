@@ -18,8 +18,8 @@ y2 = st.number_input("努力値(A,B,C,D,S):", value=0)
 
 c = st.sidebar.selectbox("性格補正",["1.1","1","0.9"])
 
-res1 = HP_function
-res2 = ABCDS_function
+res1 = HP_function(x)
+res2 = ABCDS_function(y)
 
 st.write("実数値:")
 st.write("HP: ", res1)

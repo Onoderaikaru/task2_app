@@ -18,8 +18,13 @@ b = list(map(float, b.split(",")))
 x0_bnds = st.text_input("制約条件 (x0)", "0, None")
 x0_bnds = tuple(map(float, x0_bnds.split(",")))
 
+algorithm = st.sidebar.selectbox(“最適化アルゴリズム"、「"BFGS"。“L-BFCS-B"
+"CG",
+"Newton-CG".
+"TINC"])
+
 # 線形最適化問題を解く
-res = linprog(c, A_ub=A, b_ub=b, bounds=[x0_bnds])
+res = linprog(c, A_ub=A, b_ub=b, bounds=[x0_bnds], method=algorithm)
 
 # 結果を表示
 if res.success:

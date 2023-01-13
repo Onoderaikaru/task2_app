@@ -1,30 +1,27 @@
 import streamlit as st
-from scipy.optimize import linprog
+from scipy.optimize import minimize
 
-st.title("線形最適化問題のソルバー")
+def my_function(x):
+    return x[0] + 0.5*x[1] + 0.125*x[2] + 60
 
-# 目的関数を定義
-c = st.text_input("目的関数 (c)", "1, 1")
-c = list(map(float, c.split(",")))
+def my_function(y):
+    return (y[0] + 0.5*y[1] + 0.125*y[2] + 5) * c
 
-# 制約条件を定義
-A = st.text_input("制約条件 (A)", "1, 1\n1, 0")
-A = [list(map(float, row.split(","))) for row in A.split("\n")]
+st.title("実数値計算")
 
-b = st.text_input("制約条件 (b)", "1, 1")
-b = list(map(float, b.split(",")))
+x0 = st.number_input("種族値:", value=0)
+x1 = st.number_input("個体値:", value=0)
+x2 = st.number_input("努力値:", value=0)
 
-# 制約条件を定義
-x0_bnds = st.text_input("制約条件 (x0)", "0, None")
-x0_bnds = tuple(map(float, x0_bnds.split(",")))
+y0 = st.number_input("種族値:", value=0)
+y1 = st.number_input("個体値:", value=0)
+y2 = st.number_input("努力値:", value=0)
 
-# 線形最適化問題を解く
-res = linprog(c, A_ub=A, b_ub=b, bounds=[x0_bnds])
+c = sidebar.selectbox("性格補正",["1.1","1","0.9"])
 
-# 結果を表示
-if res.success:
-    st.success("最適解が見つかりました")
-    st.write("x = ", res.x)
-    st.write("最適解の値 = ", res.fun)
-else:
-    st.error("最適解が見つかりませんでした")
+res1 = my_function(x) 
+res2 = my_function(y)
+
+st.write("実数値:")
+st.write("HP: ", res1)
+st.write("こうげき、ぼうぎょ、とくこう、とくぼう、すばやさ: ", res2)

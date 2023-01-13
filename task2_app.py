@@ -16,7 +16,7 @@ y0 = st.number_input("種族値(A,B,C,D,S):", value=0)
 y1 = st.number_input("個体値(A,B,C,D,S):", value=0)
 y2 = st.number_input("努力値(A,B,C,D,S):", value=0)
 
-c = sidebar.selectbox("性格補正",["1.1","1","0.9"])
+c = st.sidebar.selectbox("性格補正",["1.1","1","0.9"])
 
 res1 = my_function(x) 
 res2 = my_function(y)

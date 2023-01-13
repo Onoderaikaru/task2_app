@@ -1,10 +1,10 @@
 import streamlit as st
 
 def my_function(x):
-    return x[0] + 0.5*x[1] + 0.125*x[2] + 60
+    return x0 + 0.5*x1 + 0.125*x2 + 60
 
 def my_function(y):
-    return (y[0] + 0.5*y[1] + 0.125*y[2] + 5) * c
+    return (y0 + 0.5*y1 + 0.125*y2 + 5) * c
 
 st.title("実数値計算")
 

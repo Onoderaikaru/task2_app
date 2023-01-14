@@ -14,11 +14,14 @@ c = st.selectbox("性格補正",["1.1","1","0.9"])
 
 result = None
 if c == "1.1":
-  result1 = num1 + 0.5*num2 + 0.125*num3+ 60 and result2 = (num4 + 0.5*num5 + 0.125*num6 + 5) * 1.1
+  result1 = num1 + 0.5*num2 + 0.125*num3+ 60
+  result2 = (num4 + 0.5*num5 + 0.125*num6 + 5) * 1.1
 elif c == "1.0":
-  result1 = num1 + 0.5*num2 + 0.125*num3+ 60 and result2 = (num4 + 0.5*num5 + 0.125*num6 + 5) * 1.0
+  result1 = num1 + 0.5*num2 + 0.125*num3+ 60
+  result2 = (num4 + 0.5*num5 + 0.125*num6 + 5) * 1.0
 elif c == "0.9":
-  result1 = num1 + 0.5*num2 + 0.125*num3+ 60 and result2 = (num4 + 0.5*num5 + 0.125*num6 + 5) * 0.9
+  result1 = num1 + 0.5*num2 + 0.125*num3+ 60
+  result2 = (num4 + 0.5*num5 + 0.125*num6 + 5) * 0.9
 
 st.write("実数値:")
 st.write("HP: ", result1)

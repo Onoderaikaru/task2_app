@@ -18,6 +18,9 @@ y2 = st.number_input("努力値(A,B,C,D,S):", value=0)
 
 c = st.sidebar.selectbox("性格補正",["1.1","1","0.9"])
 
+res1 = my_function(x)
+res2 = my_function(y)
+
 st.write("実数値:")
-st.write("HP: ", my_function)
-st.write("こうげき、ぼうぎょ、とくこう、とくぼう、すばやさ: ", my_function)
+st.write("HP: ", res1.fun)
+st.write("こうげき、ぼうぎょ、とくこう、とくぼう、すばやさ: ", res2.fun)

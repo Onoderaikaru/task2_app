@@ -2,13 +2,13 @@ import streamlit as st
 
 st.title("実数値計算")
 
-num1 = st.number_input("種族値(HP):")
-num2 = st.number_input("個体値(HP):")
-num3= st.number_input("努力値(HP):")
+num1 = st.number_input("種族値(HP):",value=0)
+num2 = st.number_input("個体値(HP):",value=0)
+num3= st.number_input("努力値(HP):",value=0)
 
-num4 = st.number_input("種族値(A,B,C,D,S):")
-num5 = st.number_input("個体値(A,B,C,D,S):")
-num6 = st.number_input("努力値(A,B,C,D,S):")
+num4 = st.number_input("種族値(A,B,C,D,S):",value=0)
+num5 = st.number_input("個体値(A,B,C,D,S):",value=0)
+num6 = st.number_input("努力値(A,B,C,D,S):",value=0)
 
 c = st.sidebar.selectbox("性格補正",["選択なし","1.1","1","0.9"])
 

@@ -12,8 +12,8 @@ num6 = st.number_input("努力値(A,B,C,D,S):")
 
 c = st.sidebar.selectbox("性格補正",["1.1","1","0.9"])
 
-result1 = None
-result2 = None
+result1 = 0
+result2 = 0
 
 if c == "1.1":
   result1 = num1 + 0.5*num2 + 0.125*num3+ 60

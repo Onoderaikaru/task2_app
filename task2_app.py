@@ -1,25 +1,20 @@
 import streamlit as st
 
-st.title("実数値計算")
+st.title("My Calculator App")
 
-num1 = st.number_input("種族値(HP):", value=0)
-num2 = st.number_input("個体値(HP):", value=0)
-num3= st.number_input("努力値(HP):", value=0)
+num1 = st.number_input("Enter a number:")
+num2 = st.number_input("Enter another number:")
 
-num4 = st.number_input("種族値(A,B,C,D,S):", value=0)
-num5 = st.number_input("個体値(A,B,C,D,S):", value=0)
-num6 = st.number_input("努力値(A,B,C,D,S):", value=0)
-
-c = st.selectbox("性格補正",["1.1","1","0.9"])
+operation = st.selectbox("Select an operation:", ["Addition", "Subtraction", "Multiplication", "Division"])
 
 result = None
-if c == "1.1":
-  result1 = num1 + 0.5*num2 + 0.125*num3+ 60, result2 = (num4 + 0.5*num5 + 0.125*num6 + 5) * 1.1
-elif c == "1.0":
-  result1 = num1 + 0.5*num2 + 0.125*num3+ 60, result2 = (num4 + 0.5*num5 + 0.125*num6 + 5) * 1.0
-elif c == "0.9":
-  result1 = num1 + 0.5*num2 + 0.125*num3+ 60, result2 = (num4 + 0.5*num5 + 0.125*num6 + 5) * 0.9
+if operation == "Addition":
+    result = num1 + num2
+elif operation == "Subtraction":
+    result = num1 - num2
+elif operation == "Multiplication":
+    result = num1 * num2
+elif operation == "Division":
+    result = num1 / num2
 
-st.write("実数値:")
-st.write("HP: ", result1)
-st.write("こうげき、ぼうぎょ、とくこう、とくぼう、すばやさ: ", result2)
+st.write("The result is:", result)

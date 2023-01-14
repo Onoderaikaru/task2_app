@@ -16,7 +16,7 @@ if c == "選択なし":
 elif c == "1.1":
   result1 = num1 + 0.5*31 + 0.125*num2+ 60
   result2 = (num3 + 0.5*31 + 0.125*num4 + 5) * 1.1
-elif c == "1.0":
+elif c == "1":
   result1 = num1 + 0.5*31 + 0.125*num2+ 60
   result2 = (num3 + 0.5*31 + 0.125*num4 + 5) * 1.0
 elif c == "0.9":

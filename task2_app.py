@@ -1,8 +1,10 @@
 import streamlit as st
 
-my_function1 = x0 + 0.5*x1 + 0.125*x2 + 60
+def my_function(x):
+  return x[0] + x[1]*0.5 + x[2]*0.125+ 60
 
-my_function2 = (y0 + 0.5*y1 + 0.125*y2 + 5) * c
+def my_function(y):
+  return (y[0] + y[1]*0.5 + y[2]*0.125 + 5) * c
 
 st.title("実数値計算")
 
@@ -17,5 +19,5 @@ y2 = st.number_input("努力値(A,B,C,D,S):", value=0)
 c = st.sidebar.selectbox("性格補正",["1.1","1","0.9"])
 
 st.write("実数値:")
-st.write("HP: ", my_function1)
-st.write("こうげき、ぼうぎょ、とくこう、とくぼう、すばやさ: ", my_function2)
+st.write("HP: ", my_function(x))
+st.write("こうげき、ぼうぎょ、とくこう、とくぼう、すばやさ: ", my_function(y))
